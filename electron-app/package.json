@@ -1,0 +1,44 @@
+{
+  "name": "abu-sagur-desktop",
+  "version": "1.0.0",
+  "description": "Desktop Application for Abu Sagur Accounting System",
+  "main": "src/main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-build": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sqlite3": "^5.1.6",
+    "better-sqlite3": "^8.5.0"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "react-scripts": "5.0.1",
+    "concurrently": "^7.6.0",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.abusagur.accounting",
+    "productName": "Abu Sagur Accounting",
+    "files": [
+      "src/main.js",
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
