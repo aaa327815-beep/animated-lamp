@@ -1,0 +1,23 @@
+{
+  "name": "animated-lamp",
+  "version": "1.0.0",
+  "description": "A complete accounting system for Abu Sagur IT",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "client": "npm start --prefix frontend",
+    "backend": "node backend/index.js",
+    "dev": "concurrently \"npm run backend\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaa327815-beep/animated-lamp.git"
+  },
+  "keywords": [],
+  "author": "Abu Sagur IT",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
